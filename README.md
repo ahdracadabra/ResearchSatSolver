@@ -17,11 +17,11 @@ Below is a basic outline of my plan for implementation, to keep me on track as I
 
 4. Implement [DPLL Algorithm](https://en.wikipedia.org/wiki/DPLL_algorithm) to find solution
 
-5. Implement [VSIDS Heuristic](https://arxiv.org/abs/1506.08905) Heuristic
+5. Implement [VSIDS](https://arxiv.org/abs/1506.08905) Heuristic
 
-6. Implement [Jeroslow-Wang Heuristic](https://www.uio.no/studier/emner/matnat/ifi/INF3170/v10/undervisningsmateriale/forelesning12multi.pdf)(slide 49)
+6. Implement [Jeroslow-Wang](https://www.uio.no/studier/emner/matnat/ifi/INF3170/v10/undervisningsmateriale/forelesning12multi.pdf) Heuristic (slide 49)
 
-7. Implement [MOM Heuristic (Max Occurence Minimum Size)](http://www.cs.toronto.edu/~stefan/publications/classes/cse573/sat.ps)
+7. Implement [MOM (Max Occurence Minimum Size)](http://www.cs.toronto.edu/~stefan/publications/classes/cse573/sat.ps) Heuristic
 
 8. Build basic GUI
 
