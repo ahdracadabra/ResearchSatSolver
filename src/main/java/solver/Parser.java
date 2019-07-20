@@ -33,8 +33,4 @@ class Parser{
         }
         return answer;
     }
-
-    public static void main(String[] args) {
-       Formula answer = parse("(PQ)(RS)");
-    }
 }

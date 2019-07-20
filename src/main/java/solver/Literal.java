@@ -26,4 +26,8 @@ public class Literal{
     public boolean equals(Literal lit2){
         return(literal == lit2.getLit() ? true : false);
     }
+
+    public boolean identical(Literal lit2){
+        return((literal == lit2.getLit() && value == lit2.getVal()) ? true : false);
+    }
 }

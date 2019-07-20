@@ -21,6 +21,11 @@ public class Clause{
         return literals.get(pos);
     }
 
+    //this method should only be used for testing
+    public ArrayList<Literal> getLiterals(){
+        return literals;
+    }
+
     public boolean satisfied(){
         for (Literal x : literals) {
             if(x.getVal()){
