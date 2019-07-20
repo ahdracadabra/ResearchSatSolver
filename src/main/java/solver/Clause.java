@@ -16,6 +16,11 @@ public class Clause{
         literals.add(lit);
     }
 
+    //this method should only be used for testing
+    public Literal getLiteral(int pos){
+        return literals.get(pos);
+    }
+
     public boolean satisfied(){
         for (Literal x : literals) {
             if(x.getVal()){
