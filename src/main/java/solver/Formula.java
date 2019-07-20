@@ -12,7 +12,8 @@ public class Formula{
         clauses = other.getClauses();
     }
 
-    private ArrayList<Clause> getClauses(){
+    //public for testing
+    public ArrayList<Clause> getClauses(){
         return clauses;
     }
 
@@ -21,9 +22,13 @@ public class Formula{
     }
 
     public void cleanUp(){
-        for (Clause clause : clauses) {
-            if(clause.satisfied() || clause.empty()){
-                clauses.remove(clause);
+        int i = 0;
+        while(i<clauses.size()){
+            if((clauses.get(i).satisfied()) || clauses.get(i).empty()){
+                clauses.remove(i);
+            }
+            else{
+                i++;
             }
         }
     }

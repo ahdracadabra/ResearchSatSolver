@@ -64,11 +64,24 @@ public class ClauseTest {
     }
 
     @Test
-    public void satisfiedShouldReturnTrueOnSatisfiedClause() {
+    public void satisfiedShouldReturnTrueOnFullySatisfiedClause() {
         Clause testSatisfied = new Clause();
         Literal satisfiedLiteral = new Literal('P', true);
 
         testSatisfied.addLiteral(satisfiedLiteral);
+
+        //assert statement
+        assertTrue(testSatisfied.satisfied());
+    }
+
+    @Test
+    public void satisfiedShouldReturnTrueOnSatisfiedClause() {
+        Clause testSatisfied = new Clause();
+        Literal satisfiedLiteral = new Literal('P', true);
+        Literal unsatisfiedLiteral = new Literal('X', false);
+
+        testSatisfied.addLiteral(satisfiedLiteral);
+        testSatisfied.addLiteral(unsatisfiedLiteral);
 
         //assert statement
         assertTrue(testSatisfied.satisfied());
