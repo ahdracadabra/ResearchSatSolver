@@ -22,7 +22,7 @@ public class Formula{
 
     public void cleanUp(){
         for (Clause clause : clauses) {
-            if(clause.satisfied()){
+            if(clause.satisfied() || clause.empty()){
                 clauses.remove(clause);
             }
         }
