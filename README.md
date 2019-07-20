@@ -12,6 +12,10 @@ Below is a basic outline of my plan for implementation, to keep me on track as I
 
 2. Bespoke classes and Parser  
    _In Progress_  
+     * Bespoke classes _(completed 11/7/19)_  
+     * Bespoke classes unit testing _(In Progress)_  
+     * Parser _(completed 11/7/19)_  
+     * Parser unit testing _(In Progress)_  
 
 3. Implement Depth First Search to find solution
 
