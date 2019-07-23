@@ -1,5 +1,6 @@
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.ArrayList;
 
 public class ClauseTest {
 
@@ -25,6 +26,19 @@ public class ClauseTest {
         assertEquals(testLit2, testClause.getLiteral(1));
         assertNotEquals(testLit1, testClause.getLiteral(1));
         assertNotEquals(testLit2, testClause.getLiteral(0));
+    }
+
+    @Test
+    public void getLiteralsShouldGetCorrectLiterals() {
+        Literal testLit = new Literal('P', true);
+        Clause tester = new Clause();
+        ArrayList<Literal> testArray = new ArrayList();
+        
+        testArray.add(testLit);
+        tester.addLiteral(testLit);
+
+        //assert statement
+        assertEquals(testArray, tester.getLiterals());
     }
 
     @Test

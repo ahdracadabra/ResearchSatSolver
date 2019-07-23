@@ -94,4 +94,43 @@ public class LiteralTest {
         assertFalse(tester8.equals(tester7)); //it should work both ways
     }
    
+    @Test
+    public void identicalShouldCompareLiteralsAndValues() {
+        //equals method should only compare if literals' chars are equal, regardless of the values
+
+        //A literal should be equal to itself
+        Literal tester = new Literal('P', true);
+
+        assertTrue(tester.identical(tester));
+
+
+        //SameLiterals, Same Values
+        Literal tester1 = new Literal('P',true); 
+        Literal tester2 = new Literal('P', true);
+
+        
+        assertTrue(tester1.identical(tester2));
+        assertTrue(tester2.identical(tester1)); //it should work both ways
+
+        //Same Literals, Different Values
+        Literal tester3 = new Literal('P',true); 
+        Literal tester4 = new Literal('P', false);
+
+        assertFalse(tester3.identical(tester4));
+        assertFalse(tester4.identical(tester3)); //it should work both ways
+
+        //Different Literals, Same Values
+        Literal tester5 = new Literal('P',false); 
+        Literal tester6 = new Literal('X', false);
+
+        assertFalse(tester5.identical(tester6));
+        assertFalse(tester6.identical(tester5)); //it should work both ways
+
+        //Different Literals, Different Values
+        Literal tester7 = new Literal('P',true); 
+        Literal tester8 = new Literal('X', false);
+
+        assertFalse(tester7.identical(tester8));
+        assertFalse(tester8.identical(tester7)); //it should work both ways
+    }
 }
